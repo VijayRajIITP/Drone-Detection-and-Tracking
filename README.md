@@ -131,9 +131,6 @@ The detector trained with a combination of existing and generated synthetic data
 
 
 
-## 4. Contribution and Usage Guidelines (if applicable)
-
-Include any guidelines for contributions, dataset usage, or instructions for running the code.
 # 🚀 Unleashing the Power of YOLOv8 Model
 
 Welcome to the exciting journey of running the YOLOv8 model! This guide will navigate you through the process, ensuring a smooth and successful execution.
@@ -195,5 +192,21 @@ train: /path/to/train/images/
 val: /path/to/validation/images/
 nc: 80  # number of classes
 names: ['class1', 'class2', ..., 'class80']  # list of class names
+
+In this file:
+
+- `train` and `val` are paths to the directories containing your training and validation images, respectively.
+- `nc` is the number of classes.
+- `names` is a list of class names.
+
+Make sure your labels are in the YOLO format and are located in the same directory as your images.
+
+## 🚀 Training the Model For Custom Datasets
+
+Once you’ve created your YAML file, you can train the model:
+
+```bash
+python train.py --img 640 --batch 16 --epochs 100 --data my_data.yaml --weights yolov8.pt --nosave --cache
+
 
 

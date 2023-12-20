@@ -64,6 +64,38 @@ We utilized Fredrik’s Svanstrom et al. (2020) dataset, comprising real-time vi
 | CWDVT   | 419                    |
 
 Both CWDVT and DUT datasets are exclusively reserved for testing, categorizing them as unseen datasets in our experiments. We compare synthetic drone samples generated from tracks in LaSOT (CLDTs) and Custom web videos (CWDVT) with samples from well-established datasets like ICPR and DUT. The diversity observed in the generated synthetic drone samples validates the effectiveness of our proposed approach.
+# 🌐 Multi-Drone Tracking Dataset Details
+
+## 3.6.1 Multi-Drone Tracking Dataset
+
+Our multi-drone tracking dataset is a unique creation, merging ICPR drone data and LaSOT videos. Leveraging SiamMask Wang et al. (2019), a mask-based tracker, we manually annotated the first frame of single drone videos. Pseudo-labeled masks were then extracted from ICPR drone videos, and the center of each track in the video sequence was calculated.
+
+### Dataset Generation Process
+
+With the obtained pseudo-labeled masks and their corresponding center coordinates, we composited drones into the LaSOT background drone video using our proposed image composition method (see Figure 2). The composited drones were assigned relevant tracker IDs for labeling. This approach demonstrates the effectiveness of our framework, resulting in the creation of the Multi-Drone Tracking (MDT) dataset.
+
+### Dataset Challenges
+
+The MDT dataset encompasses various challenges, including:
+- Drones of varying sizes, from small drones as tiny as 10x10 pixels
+- Significant drift in drone movement from frame to frame, reflecting very fast drone motion
+- A background cluttered with various elements
+
+### MDT Dataset Parameters
+
+| Parameter          | Value           |
+|--------------------|-----------------|
+| No. of Videos      | 20              |
+| No. of Frames      | 21,818          |
+| Min Width x Height | 10x10 pixels    |
+| Max Width x Height | 310x252 pixels  |
+| Backgrounds        | Night, Sky, Cloudy |
+
+**Table 3.2: Details of the Multi-Drone Tracking (MDT) dataset.**
+
+This dataset showcases the complexities of tracking multiple drones in various scenarios. The challenges posed by drones of different sizes and rapid movements, along with diverse backgrounds, make the MDT dataset an excellent testbed for evaluating the robustness of object tracking models.
+
+
 
 
 ## 4. Contribution and Usage Guidelines (if applicable)

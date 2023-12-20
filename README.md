@@ -1,6 +1,4 @@
-# Multi-Drone-Detection
-Improving Object Detection Performance with Robust Datasets and Addressing Manual Annotation Challenges
-# Object Detection Project
+# 🚀 Object Detection Project
 
 ## 3. Techniques and Challenges
 
@@ -15,11 +13,11 @@ Rare objects refer to items that are infrequently observed and have limited repr
 
 ### 3.2 Techniques to Improve Object Detection
 
-#### Dataset Generation and Training
+#### 📊 Dataset Generation and Training
 
 Create specialized datasets with a mix of variations, encompassing different weather conditions and, notably, night vision visuals. This approach ensures the model becomes adept at object detection across a diverse set of environmental scenarios, enhancing its overall robustness.
 
-#### Architectural Modifications
+#### 🛠️ Architectural Modifications
 
 Modifying the architecture involves adjusting the structure, layers, or parameters of the model. This could include adding more layers, changing activation functions, or incorporating attention mechanisms to improve object detection performance.
 
@@ -27,10 +25,10 @@ Right now, I am concentrating on creating datasets for the initial phase. This m
 
 ### 3.3 Challenges
 
-- Data Acquisition
-- Limited Datasets: Only limited to very good weather conditions
-- Need diversified samples in the dataset for better detection
-- Class Imbalance
+- 🌐 Data Acquisition
+- 🌧️ Limited Datasets: Only limited to very good weather conditions
+- 🌈 Need diversified samples in the dataset for better detection
+- ⚖️ Class Imbalance
 
 ### 3.4 Overcoming Datasets Limitations
 
@@ -43,4 +41,3 @@ Drone objects in the first frame are localized in a drone video, and provided to
 ## 4. Contribution and Usage Guidelines (if applicable)
 
 Include any guidelines for contributions, dataset usage, or instructions for running the code.
-

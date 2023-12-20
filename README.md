@@ -93,7 +93,9 @@ The MDT dataset encompasses various challenges, including:
 
 **Table 3.2: Details of the Multi-Drone Tracking (MDT) dataset.**
 
-This dataset showcases the complexities of tracking multiple drones in various scenarios. The challenges posed by drones of different sizes and rapid movements, along with diverse backgrounds, make the MDT dataset an excellent testbed for evaluating the robustness of object tracking models.
+This dataset showcases the complexities of tracking multiple drones in various scenarios. The challenges posed by drones of different sizes and rapid movements, along with diverse backgrounds, make the MDT dataset an excellent testbed for evaluating the robustness of object tracking models. if you see carefully now we hyave two drones in Single Image
+![fig7](https://github.com/VijayRajIITP/Multi-Drone-Detection/assets/149241319/be8f5674-d13e-4a3d-ba4d-cd7d6daa42f2)
+
 
 
 

@@ -37,6 +37,7 @@ Getting datasets of rare objects is tough because of privacy issues, making them
 ### 3.5 Annotating Datasets with a Tracker
 
 Drone objects in the first frame are localized in a drone video, and provided to the state-of-the-art single-object trackers. These trackers were then used to determine the object’s location in subsequent frames of any drone video.
+<img width="837" alt="sent1" src="https://github.com/VijayRajIITP/Multi-Drone-Detection/assets/149241319/61e127a4-7fef-4136-a740-18fee5fe8d42">
 
 ## 4. Contribution and Usage Guidelines (if applicable)
 

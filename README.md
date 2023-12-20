@@ -185,13 +185,15 @@ Follow these steps to run the YOLOv8 model:
 
     Don't forget to replace `data/images/` with the path to your images.
 
-## 📝 Notes
+## 📝 Creating a YAML File
 
-- The `--weights` argument specifies the model weights to use.
-- The `--img` argument specifies the size of the image.
-- The `--conf` argument specifies the confidence threshold for predictions.
+Before training the model, you need to create a YAML file that specifies the paths to your images and labels. Here's an example of what this file might look like:
 
-For more information, refer to the official YOLOv8 documentation.
+```yaml
+# my_data.yaml
+train: /path/to/train/images/
+val: /path/to/validation/images/
+nc: 80  # number of classes
+names: ['class1', 'class2', ..., 'class80']  # list of class names
 
-Happy coding! 🎉
 

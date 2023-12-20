@@ -97,6 +97,37 @@ This dataset showcases the complexities of tracking multiple drones in various s
 ![fig7](https://github.com/VijayRajIITP/Multi-Drone-Detection/assets/149241319/be8f5674-d13e-4a3d-ba4d-cd7d6daa42f2)
 
 
+# 🚀 Evaluation and Results
+
+To assess the effectiveness of the generated datasets, we employed the YoloV8 object detection model, known for its speed and superior accuracy. Fine-tuning was conducted on the Yolov8n model pretrained on the COCO dataset using the Adam optimizer for 50 epochs, with a batch size of 16 and hyperparameters aligned with Yolov8n's foundational paper.
+
+## Object Detection Precision Results with YOLO V8 Model
+
+| Training Dataset        | ICPR | DUT (Unseen) | LDT  | CWDT | CMD  |
+|-------------------------|------|--------------|------|------|------|
+| ICPR                    | 0.954| 0.107        | 0.123| 0.505| 0.108|
+| LDT                     | 0.148| 0.826        | 0.984| 0.911| 0.304|
+| ICPR plus CLDT          | 0.964| 0.719        | 0.965| 0.901| 0.325|
+| ICPR, CLDT, MDT         | 0.939| 0.629        | 0.952| 0.898| 0.99 |
+
+**Table 4.1: Precision Results with YOLO V8 model**
+
+## Multi-Object Tracking Performance with YOLO V8n Trained Model
+
+| Detector           | MOTA (BT) | MOTA (SS) | MOTP (BT) | MOTP (SS) |
+|--------------------|-----------|-----------|-----------|-----------|
+| ICPR               | 0.07      | -1.23     | 0.721     | 0.709     |
+| LaSOT              | 0.697     | 0.756     | 0.683     | 0.658     |
+| ICPR and CLDT      | 0.6601    | 0.686     | 0.651     | 0.650     |
+| ICPR, LaSOT, MDT   | 0.93      | 0.931     | 0.213     | 0.198     |
+
+**Table 4.2: MOT Performance with YOLO V8n Trained Model.**
+
+From the precision results in Table 4.1, it's evident that the model trained solely on ICPR real data struggles on unseen datasets such as LaSOT Drone data and DUT-Test data. However, when trained with the self-annotated LDT dataset, the model performs effectively on both seen and unseen datasets.
+
+We also assessed state-of-the-art trackers Byte-Track (BT) Zhang et al. (2022) and Strong-SORT (SS) Du et al. (2023) on our Multi-Drone Tracking (MDT) dataset, showcasing their capabilities.
+
+The detector trained with a combination of existing and generated synthetic datasets outperforms other datasets in tracker performance. This improvement is evident in Table 4.2, indicating the potential for further developments and highlighting the challenging nature of the generated datasets.
 
 
 

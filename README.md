@@ -39,6 +39,33 @@ Getting datasets of rare objects is tough because of privacy issues, making them
 Drone objects in the first frame are localized in a drone video, and provided to the state-of-the-art single-object trackers. These trackers were then used to determine the object’s location in subsequent frames of any drone video.
 <img width="837" alt="sent1" src="https://github.com/VijayRajIITP/Multi-Drone-Detection/assets/149241319/61e127a4-7fef-4136-a740-18fee5fe8d42">
 
+# 3.6 Dataset Details
+
+In this section, we present an overview of vision-based drone detection and tracking resources, including details about our generated dataset.
+
+We utilized Fredrik’s Svanstrom et al. (2020) dataset, comprising real-time video clips captured in day and night scenarios. From this dataset, we carefully selected 13,801 annotated training samples and 3,451 annotated test samples for our experimental purposes. Additionally, we generated 459 effective samples using Custom web data, forming the Custom Web Drone Video Tracks (CWDVT) dataset.
+
+## Experimental Setup
+
+### Training Samples
+
+| Dataset | No. of Training Samples |
+|---------|--------------------------|
+| ICPR    | 13,801                   |
+| LaSOT   | 40,748                   |
+| CLDT    | 1,708                    |
+
+### Testing Samples
+
+| Dataset | No. of Testing Samples |
+|---------|------------------------|
+| ICPR    | 3,451                  |
+| DUT     | 2,208                  |
+| CWDVT   | 419                    |
+
+Both CWDVT and DUT datasets are exclusively reserved for testing, categorizing them as unseen datasets in our experiments. We compare synthetic drone samples generated from tracks in LaSOT (CLDTs) and Custom web videos (CWDVT) with samples from well-established datasets like ICPR and DUT. The diversity observed in the generated synthetic drone samples validates the effectiveness of our proposed approach.
+
+
 ## 4. Contribution and Usage Guidelines (if applicable)
 
 Include any guidelines for contributions, dataset usage, or instructions for running the code.
